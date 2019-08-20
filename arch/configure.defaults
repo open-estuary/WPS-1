@@ -1,3 +1,26 @@
+#######################################################################################################################
+#ARCH    Linux aarch64 g95 compiler    # serial serial_NO_GRIB2 dmpar dmpar_NO_GRIB2
+#
+COMPRESSION_LIBS    = CONFIGURE_COMP_L
+COMPRESSION_INC     = CONFIGURE_COMP_I
+FDEFS               = CONFIGURE_FDEFS
+SFC                 = gfortran
+SCC                 = gcc
+DM_FC               = mpif90
+DM_CC               = mpicc  -DMPI2_SUPPORT
+FC                  = CONFIGURE_FC
+CC                  = CONFIGURE_CC
+LD                  = $(FC)
+FFLAGS              = -ffree-form -g -fno-second-underscore
+F77FLAGS            = -ffixed-form -g -fno-second-underscore
+FCSUFFIX            =
+FNGFLAGS            = $(FFLAGS)
+LDFLAGS             = -g
+CFLAGS              = -g
+CPP                 = /usr/bin/cpp -P -traditional
+CPPFLAGS            = -D_UNDERSCORE -DBYTESWAP -DLINUXG95 -DIO_NETCDF -DBIT32 CONFIGURE_MPI
+ARFLAGS             =
+
 ########################################################################################################################
 #ARCH   Linux ppc64 BG bglxf compiler with blxlc  # dmpar
 #
